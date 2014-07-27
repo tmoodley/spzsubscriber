@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MongoPagedList</id>
+    <version>1.0.0.1</version>
+    <title>MongoPagedList</title>
+    <authors>Andrea Valla</authors>
+    <owners>Andrea Valla</owners>
+    <projectUrl>https://github.com/avalla/MongoPagedList</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MongoCursor PagedList Extension</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>MongoDb PagedList Pagination</tags>
+    <dependencies>
+      <dependency id="AutoMapper" version="3.1.1" />
+      <dependency id="mongocsharpdriver" version="1.8.3" />
+      <dependency id="PagedList" version="1.17.0.0" />
+    </dependencies>
+  </metadata>
+</package>
