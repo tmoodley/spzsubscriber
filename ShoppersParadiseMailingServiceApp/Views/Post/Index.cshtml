@@ -13,7 +13,7 @@
 @foreach (var item in Model) {
    
         <div>
-            <h3>@Html.ActionLink(item.Title, "Detail", new { id = item.Url })</h3>
+            <h3>@Html.ActionLink(item.Title, "Details", new { id = item.Url })</h3>
 
             <p>
                 <em>Posted at @item.Date.ToLocalTime().ToString() by @item.Author</em>
