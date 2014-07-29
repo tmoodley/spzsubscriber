@@ -13,7 +13,7 @@ namespace ShoppersParadiseMailingServiceApp.DAL
         private MongoServer mongoServer = null;
         private bool disposed = false;
 
-        static string connectionString = "mongodb://admin:Spz123456@kahana.mongohq.com:10001/shoppersparadise";
+        static string connectionString = ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString;
         MongoUrl url = new MongoUrl(connectionString);
 
         private string dbName = "shoppersparadise";

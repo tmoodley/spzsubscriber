@@ -1,0 +1,36 @@
+﻿@model IList<ShoppersParadiseMailingServiceApp.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Posts</h2>
+
+<p>
+    @Html.ActionLink("New Post", "Create")
+</p>
+ 
+@foreach (var item in Model) {
+   
+        <div>
+            <h3>@Html.ActionLink(item.Title, "Detail", new { id = item.Url })</h3>
+
+            <p>
+                <em>Posted at @item.Date.ToLocalTime().ToString() by @item.Author</em>
+            </p>
+
+            <p>
+                @item.Summary
+            </p>
+
+            <p>
+                (@item.TotalComments comments)
+            </p>
+
+            <p>
+                @Html.ActionLink("Delete Post", "Delete", new { id = item.PostId })
+                |
+                @Html.ActionLink("Edit Post", "Update", new { id = item.Url })
+            </p>
+        </div>
+}
