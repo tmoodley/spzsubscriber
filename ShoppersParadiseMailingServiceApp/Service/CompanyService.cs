@@ -1,4 +1,5 @@
-﻿using ShoppersParadiseMailingServiceApp.DAL;
+﻿using MongoDB.Driver;
+using ShoppersParadiseMailingServiceApp.DAL;
 using ShoppersParadiseMailingServiceApp.Models;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,18 @@ namespace ShoppersParadiseMailingServiceApp.Service
         public void Create(Company company)
         {
             _companys.Collection.Save(company);
+        }
+
+        public IList<Company> GetCompanys()
+        {
+            try
+            {
+                return _companys.Collection.FindAll().ToList<Company>();
+            }
+            catch (MongoConnectionException)
+            {
+                return new List<Company>();
+            }
         }
 
     }
